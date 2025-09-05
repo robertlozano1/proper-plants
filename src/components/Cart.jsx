@@ -1,10 +1,10 @@
 import CartItem from "./CartItem";
 
-// Requirement 14: This is one of the separate components for cart functionality
+// 14: This is one of the separate components for cart functionality
 export default function Cart({ cart, onUpdateQuantity }) {
   return (
-    <div className="cart">
-      {/* Requirement 9: Render a cart item for each plant the user has added */}
+    <div className={`cart ${cart.length > 0 ? "has-items" : ""}`}>
+      {/* 9: Render a cart item for each plant the user has added */}
       {cart.length === 0 ? (
         <p className="empty-cart">Your cart is empty</p>
       ) : (

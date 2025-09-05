@@ -1,15 +1,15 @@
-// Requirement 14: This is the second separate component for cart functionality
+// 14: This is the second separate component for cart functionality
 export default function CartItem({ item, onUpdateQuantity }) {
   // Handler for decrementing quantity
   const handleDecrement = () => {
-    // Requirement 12: One button decrements the quantity
-    // Requirement 13: If quantity becomes 0 or below, item will be removed (handled in App)
+    // 12: One button decrements the quantity
+    // 13: If quantity becomes 0 or below, item will be removed (handled in App)
     onUpdateQuantity(item.id, item.quantity - 1);
   };
 
   // Handler for incrementing quantity
   const handleIncrement = () => {
-    // Requirement 12: Other button increments the quantity
+    // 12: Other button increments the quantity
     onUpdateQuantity(item.id, item.quantity + 1);
   };
 
